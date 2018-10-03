@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="app.com.hijaupadi">
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- untuk mas agus ininya dihapus -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="AA_DB_NAME"
+            android:value="MyDatabase.db" />
+        <meta-data
+            android:name="AA_DB_VERSION"
+            android:value="5" />
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ScanImageActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".HasilActivityRGB" />
+        <activity android:name=".HasilActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".HistoryActivity"/>
+        <activity android:name=".HistoryTableActivity" />
+        <activity android:name=".helper.AndroidDatabaseManager" />
+    </application>
+
+</manifest>

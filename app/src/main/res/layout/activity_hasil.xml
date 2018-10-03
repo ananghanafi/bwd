@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_hasil"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/padi"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="app.com.hijaupadi.HasilActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="false"
+                android:layout_margin="20dp"
+                android:adjustViewBounds="true"
+                android:maxWidth="300dp"
+                android:scaleType="fitXY" />
+
+            <TextView
+                android:id="@+id/tv_bwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img"
+                android:layout_centerHorizontal="true"
+                android:background="#ffffff"
+                android:text="TextView"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:visibility="invisible" />
+
+
+
+            <org.eazegraph.lib.charts.BarChart xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/cubiclinechart"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:layout_below="@id/tv_bwd"
+                android:background="#FFFFFF"
+                app:egBarWidth="5dp"
+                app:egLegendHeight="40dp" />
+            <!--
+                        <TextView
+                            android:id="@+id/tv_3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/cubiclinechart"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:layout_margin="20dp"
+                            android:background="#FFFFFF"
+                            android:text="CHART BIN WARNA" />
+
+                        <org.eazegraph.lib.charts.ValueLineChart xmlns:app="http://schemas.android.com/apk/res-auto"
+                            android:id="@+id/cubiclinechart2"
+                            android:layout_width="match_parent"
+                            android:layout_height="200dp"
+                            android:layout_below="@id/tv_3"
+                            android:background="#FFFFFF"
+                            app:egCurveSmoothness="0.4"
+                            app:egIndicatorLineColor="#B00003"
+                            app:egLegendHeight="40dp"
+                            app:egShowStandardValue="true"
+                            app:egUseCubic="true"
+                            app:egUseOverlapFill="false" />
+-->
+            <TextView
+                            android:id="@+id/tv_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:layout_below="@+id/cubiclinechart"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerInParent="false"
+                            android:layout_margin="20dp"
+                            android:background="#FFFFFF"
+                            android:text="HISTOGRAM" />
+
+            <TextView
+                android:id="@+id/tv_long"
+                android:layout_below="@+id/tv_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="false"
+                android:background="#FFFFFF"
+                android:text="Longitude" />
+
+            <TextView
+                android:id="@+id/tv_lat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_long"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="false"
+                android:background="#FFFFFF"
+                android:text="Lihat lokasi pada maps"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/tv_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_lat"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="false"
+                android:layout_margin="20dp"
+                android:background="#FFFFFF"
+                android:text="CHART HISTOGRAM S-RGB" />
+
+
+                    </RelativeLayout>
+                </ScrollView>
+            </RelativeLayout>

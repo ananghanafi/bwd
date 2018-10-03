@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_scan_image"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/padi"
+    tools:context="app.com.hijaupadi.ScanImageActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutForText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_long"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#ffffff"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tv_lat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="#ffffff"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:visibility="invisible" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#ffffff"
+            android:text="TextView"
+            android:textAlignment="center"
+            android:visibility="invisible" />
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/imgGridView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutForText"
+        android:footerDividersEnabled="false"
+        android:numColumns="3"
+        android:padding="1dp">
+    </GridView>
+    <GridView
+        android:id="@+id/idGridView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/layoutForText"
+        android:numColumns="3"
+        android:padding="1dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imgGridView"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/take"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimary"
+            android:text="Ambil Gambar"
+            android:textColor="#FFFFFF" />
+
+    </LinearLayout>
+</RelativeLayout>
